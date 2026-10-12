@@ -1,0 +1,9 @@
+{
+  "name": "paissible-proof-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"require('fs').mkdirSync('dist',{recursive:true}); require('fs').copyFileSync('public/index.html','dist/index.html'); console.log('built dist/index.html')\"",
+    "test": "node -e \"const fs=require('fs'); const html=fs.readFileSync('public/index.html','utf8'); if(!html.includes('pAIssible')) throw new Error('missing expected content'); console.log('test passed')\""
+  }
+}
